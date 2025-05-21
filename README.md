@@ -29,7 +29,7 @@ These are following things that are required for static web hosting :
 Step — 1 : Go to Amazon S3 and create a bucket
 ----------------------------------------------
 
-<img src="![image](https://github.com/user-attachments/assets/add51870-a85c-43b8-853e-20e5ce664002) align="center"/>
+![image](https://github.com/user-attachments/assets/add51870-a85c-43b8-853e-20e5ce664002) 
 
 Amazon S3
 
