@@ -4,7 +4,7 @@ If you’re looking for a simple, scalable, and cost-effective way to publish a 
 
 In this guide, I’ll walk you through the process of hosting a static website on Amazon S3. We’ll cover everything from setting up your bucket and uploading your files to configuring permissions and enabling public access. By the end, your site will be live and accessible to anyone on the internet — all with minimal setup and zero server maintenance.
 <div align="center">
-<img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*2vrMXr6e2TYoKhhHEfSoaA.png"  width="400"/>
+<img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*2vrMXr6e2TYoKhhHEfSoaA.png"  width="700"/>
 </div>
 
 What is Amazon S3?
@@ -28,7 +28,7 @@ These are following things that are required for static web hosting :
 Step — 1 : Go to Amazon S3 and create a bucket
 ----------------------------------------------
 <div>
-<img src="![image](https://github.com/user-attachments/assets/add51870-a85c-43b8-853e-20e5ce664002) align="center">
+<img src="![image](https://github.com/user-attachments/assets/add51870-a85c-43b8-853e-20e5ce664002) align="center"/>
 </div>
 Amazon S3
 
@@ -36,7 +36,7 @@ Amazon S3
 2.  Select the bucket type as **General Purpose** bucket and also provide the name for the bucket
 3.  Enable **Bucket versioning** and enable **bucket key** , then click on **create bucket**
 <div>
-<img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*-gPR8Nv6gNQRkksH4zqdFA.jpeg">
+<img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*-gPR8Nv6gNQRkksH4zqdFA.jpeg" width="400">
 </div>
 
 Step — 2 : Upload the Html and CSS files into the bucket
