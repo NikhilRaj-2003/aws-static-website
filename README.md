@@ -1,108 +1,110 @@
-How to host Static Website on Amazon S3
-Amazon Simple Storage Service (Amazon S3) can be used to host static Websites without a need for a Web server (at an extremely low cost). S3 buckets can be used to host the HTML, CSS and JavaScript files for entire static websites.
+Host Your Static Website on AWS S3 in Minutes — No Server Needed
+================================================================
 
-Introduction
-A website is static when the system services used to render web pages and scripts are all client rather than server-based. On the other hand, a dynamic website relies on server-side processing, including server-side scripts such as PHP, JSP, or ASP.NET
+**Introduction**
+----------------
 
-Most websites are becoming static websites which means they run zero server side code and consist of only HTML, CSS and JavaScript. With no server side code to run, there is no reason to host them on a traditional server.
+[![Nikhil Raj A](https://miro.medium.com/v2/da:true/resize:fill:64:64/0*lskCK0QgsFYg7kUt)
 
-You can start by creating an Amazon S3 bucket, enabling the Amazon S3 Website hosting feature, and configuring access permissions for the bucket. After you have uploaded files and setup Website, Amazon S3 takes care of serving your content to your visitors.
+](https://medium.com/@nikhilsiri2003?source=post_page---byline--8f13b1a83daf---------------------------------------)[Nikhil Raj A](https://medium.com/@nikhilsiri2003?source=post_page---byline--8f13b1a83daf---------------------------------------)
 
-Amazon CloudFront: You can also use Amazon CloudFront to enable your website to load quickly. Amazon CloudFront will create a content delivery network (CDN) that hosts your website content in close proximity to your users.
+Follow5 min read·2 days ago
 
+\--
 
-S3 Static Website Hosting
+Listen
 
-Advantages of Hosting Website on S3
-Here are some of the advantages of hosting site on S3
+Share
 
-Performance: The website will be highly performant and scalable at a fraction of the cost of a traditional Web server.
+If you’re looking for a simple, scalable, and cost-effective way to publish a website online, Amazon S3 (Simple Storage Service) is an excellent choice. Whether it’s a personal portfolio, a resume site, project documentation, or even a landing page, S3 lets you host static websites without needing a server or complex backend setup.
 
-Scalability: Amazon S3 is inherently scalable. For popular websites, the Amazon S3 architecture will scale seamlessly to serve thousands of HTTP requests per second without any changes to the architecture.
+In this guide, I’ll walk you through the process of hosting a static website on Amazon S3. We’ll cover everything from setting up your bucket and uploading your files to configuring permissions and enabling public access. By the end, your site will be live and accessible to anyone on the internet — all with minimal setup and zero server maintenance.
 
-Availability: In addition, by hosting with Amazon S3, the website is inherently highly available.
+What is Amazon S3?
+==================
+
+Amazon S3 (Simple Storage Service) is a highly scalable, durable, and secure object storage service offered by AWS. It’s commonly used for storing files such as images, videos, backups, and documents. But beyond just storage, S3 can also be used to **host static websites**, making it a serverless and cost-effective solution for simple web applications.
+
+What is Static Website Hosting on S3?
+=====================================
+
+Static website hosting on S3 allows you to host **HTML, CSS, JavaScript, and other static assets** directly from an S3 bucket — without any need for a traditional web server. Once configured, your bucket can serve web pages to users over the internet, complete with support for an index document (like `index.html`) and error pages.
 
 Prerequisites
-An AWS account
+-------------
 
-S3 Static Website Hosting
+These are following things that are required for static web hosting :
 
-Set-Up Instructions
-Below are the steps to deploy static Website on Amazon S3. You can follow these instructions to deploy your own static Website.
+*   AWS Account
+*   HTML / CSS code or code of a web page
 
-Open AWS Management console. Select S3 under Storage.
+Step — 1 : Go to Amazon S3 and create a bucket
+----------------------------------------------
 
-Step 1 - Create an S3 Bucket
-When you first create an S3 bucket, you select the AWS Region in which the files will be geographically stored.
+Amazon S3
 
-Click on "Create Bucket" button.
+1.  Click on **Create bucket** to create a new bucket
+2.  Select the bucket type as **General Purpose** bucket and also provide the name for the bucket
+3.  Enable **Bucket versioning** and enable **bucket key** , then click on **create bucket**
 
-Provide a globally unique name for bucket and select Region.
+Step — 2 : Upload the Html and CSS files into the bucket
+--------------------------------------------------------
 
-Leave blank this field "Copy Settings from an existing bucket".
+1.  Go to the bucket that you have created and upload the files either by dragging the files or uploading it manually .
 
+Uploading the file into the S3 Bucket
 
-Create Bucket
+2\. After uploading the Html and CSS files , click on **upload** then the files will be uploaded into the S3 — bucket
 
-Step 2 - Upload Content of your Website
-Upload the website contents to your S3 bucket including sub-folders.
+3\. Then go to permissions and provide the Bucket — policy for accesing the content inside the S3 bucket . But before that lets understand why we need to provide the **bucket — policy** and it supports JSON format .
 
-For Example: You can use sample Website "Website" folder contents (provided in this repository).
+Why Should We Give a Bucket Policy in S3?
+-----------------------------------------
 
-index.html
-error.html
-css
-images
+A **bucket policy** in Amazon S3 is a powerful way to **control access** to your S3 bucket and its contents. It is written in JSON and defines permissions for users, roles, or even the public, specifying **who can access what resources and under what conditions**.
 
-Upload Contents
-
-Step 3 - Add a Bucket Policy to allow Public Read Access
-Go to Permissions Tab and update Public Access Setting:
-
-Uncheck Manage public bucket policies:
-
-Uncheck - Block new public bucket policies (Recommended)
-
-Uncheck - Block public and cross-account access if bucket has public policies (Recommended)
-
-
-Create Bucket Policy
-
-Add following bucket policy. Replace [YOUR_BUCKET_NAME] with name of your bucket policy.
-
-{ 
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow", 
-            "Principal": "*", 
-            "Action": "s3:GetObject", 
-            "Resource": "arn:aws:s3:::[YOUR_BUCKET_NAME]/*" 
-        } 
-    ] 
+```
+{  
+  "Version": "2012-10-17",  
+  "Statement": \[  
+    {  
+      "Sid": "PublicReadGetObject",  
+      "Effect": "Allow",  
+      "Principal": "\*",  
+      "Action": "s3:GetObject",  
+      "Resource": "arn:aws:s3:::aws-static-website19/\*"  
+    }  
+  \]  
 }
-Click 'Save' button to save changes.
+```
 
+4\. Under properties of the S3 bucket , you can see S**tatic Website Hosting** at the end , Click on **Edit** to enable static web hosting .
 
-Create Bucket Policy
+5\. Enable **Static Web Hosting** and also provide the index document as **index.html** so that it can recognize or take the html file. Then After enabling the **static web hosting** you will recieve a Bucket endpoint URL which is used for accessing the content present inside the s3 bucket.
 
-Step 4 - Enable Website Hosting
-In order to serve assets via url, you need to enable Website Hosting
+What Is the S3 Bucket Website Endpoint URL?
+-------------------------------------------
 
-Go to Properties and enable "Static Website Hosting" option
+When you enable **Static Website Hosting** on an Amazon S3 bucket, AWS generates a **special URL** called the **_S3 website endpoint_**. This is the public URL where your static website becomes accessible.
 
-Note the endpoint. http://{bucket-name}.s3-website-{AWS-Region}.amazonaws.com
+And it looks like this for example :
 
+```
+http://<bucket-name>.s3-website-<aws-region>.amazonaws.com
+```
 
-Enable Website Hosting
+6\. This is the Bucket Website endpoint URL generated after enabling the static website hosting .
 
+Result :
+--------
 
-Enable Website Hosting
+When you copy the URL and paste into any browser , you can see the website been hosted without any server required
 
-Step 5 - Access Your Website (Testing/Validation)
-Access the site in browser: http://{bucket-name}.s3-website-{AWS-Region}.amazonaws.com
+website hosted using static web hosting
 
-For Example: http://pwdgen.s3-website-us-east-1.amazonaws.com/
+Conclusion
+----------
 
+Hosting a static website with Amazon S3 is a quick and easy way to put your website on the internet. You don’t need any servers or complicated setups. Just upload your HTML and CSS files, change a few settings, and your site is ready for everyone to see.
 
-Sample Static Website
+This method works great for simple sites like portfolios, small business pages, or project demos. It’s affordable (often free) and can grow with your needs. Plus, if you want, you can connect your own website name and make your site more secure using other AWS tools.
