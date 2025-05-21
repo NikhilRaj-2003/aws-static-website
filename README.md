@@ -1,20 +1,4 @@
-Host Your Static Website on AWS S3 in Minutes — No Server Needed
-================================================================
-
-**Introduction**
-----------------
-
-[![Nikhil Raj A](https://miro.medium.com/v2/da:true/resize:fill:64:64/0*lskCK0QgsFYg7kUt)
-
-](https://medium.com/@nikhilsiri2003?source=post_page---byline--8f13b1a83daf---------------------------------------)[Nikhil Raj A](https://medium.com/@nikhilsiri2003?source=post_page---byline--8f13b1a83daf---------------------------------------)
-
-Follow5 min read·2 days ago
-
-\--
-
-Listen
-
-Share
+***Introduction***
 
 If you’re looking for a simple, scalable, and cost-effective way to publish a website online, Amazon S3 (Simple Storage Service) is an excellent choice. Whether it’s a personal portfolio, a resume site, project documentation, or even a landing page, S3 lets you host static websites without needing a server or complex backend setup.
 
