@@ -44,7 +44,8 @@ Step — 2 : Upload the Html and CSS files into the bucket
 --------------------------------------------------------
 
 1.  Go to the bucket that you have created and upload the files either by dragging the files or uploading it manually .
-   <div align="center">
+
+<div align="center">
   <img src="https://your-image-url.png" alt="Your Image" width="400" />
   <p>Uploading files into the S3 bucket</p>
 </div>
