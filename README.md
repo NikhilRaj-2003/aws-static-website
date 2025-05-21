@@ -4,7 +4,7 @@ If you’re looking for a simple, scalable, and cost-effective way to publish a 
 
 In this guide, I’ll walk you through the process of hosting a static website on Amazon S3. We’ll cover everything from setting up your bucket and uploading your files to configuring permissions and enabling public access. By the end, your site will be live and accessible to anyone on the internet — all with minimal setup and zero server maintenance.
 
-img src = "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*2vrMXr6e2TYoKhhHEfSoaA.png"
+img src = https://miro.medium.com/v2/resize:fit:1100/format:webp/1*2vrMXr6e2TYoKhhHEfSoaA.png
 
 What is Amazon S3?
 ==================
