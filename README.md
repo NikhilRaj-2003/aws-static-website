@@ -27,12 +27,17 @@ These are following things that are required for static web hosting :
 
 Step — 1 : Go to Amazon S3 and create a bucket
 ----------------------------------------------
-
+<div>
+<img src="![image](https://github.com/user-attachments/assets/add51870-a85c-43b8-853e-20e5ce664002) align="center">
+</div>
 Amazon S3
 
 1.  Click on **Create bucket** to create a new bucket
 2.  Select the bucket type as **General Purpose** bucket and also provide the name for the bucket
 3.  Enable **Bucket versioning** and enable **bucket key** , then click on **create bucket**
+<div>
+<img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*-gPR8Nv6gNQRkksH4zqdFA.jpeg">
+</div>
 
 Step — 2 : Upload the Html and CSS files into the bucket
 --------------------------------------------------------
