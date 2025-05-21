@@ -10,14 +10,6 @@ by [Nikhil Raj A](https://medium.com/@nikhilsiri2003?source=post_page---byline--
 **Introduction**
 ----------------
 
-Follow
-
-
-2 days ago
-
-
-
-
 If you’re looking for a simple, scalable, and cost-effective way to publish a website online, Amazon S3 (Simple Storage Service) is an excellent choice. Whether it’s a personal portfolio, a resume site, project documentation, or even a landing page, S3 lets you host static websites without needing a server or complex backend setup.
 
 In this guide, I’ll walk you through the process of hosting a static website on Amazon S3. We’ll cover everything from setting up your bucket and uploading your files to configuring permissions and enabling public access. By the end, your site will be live and accessible to anyone on the internet — all with minimal setup and zero server maintenance.
